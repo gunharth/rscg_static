@@ -1,0 +1,114 @@
+/* Reset */
+@import 'tailwindcss/base';
+@import 'reset';
+
+/* Components */
+@import 'tailwindcss/components';
+@import 'fonts';
+
+/* Utilities */
+@import 'tailwindcss/utilities';
+
+
+/* **************************************************************** */
+/* HTML REDEFINITIONS */
+/* **************************************************************** */
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  color: #333333;
+/* font-family: 'Fira Sans Condensed', sans-serif; */
+}
+
+p {
+  @apply text-sm md:text-base;
+}
+
+h1, h2 {
+  font-weight: 600;
+  @apply p-2 pt-0;
+}
+
+h1::after, h2::after {
+  content: '';
+  display: block;
+  height: 1px;
+  border-bottom: 1px solid;
+  @apply border-wedl-red my-2 w-2/5;
+  margin-left: -0.5em;
+}
+
+h4 {
+  @apply font-semibold;
+}
+
+nav {
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+/* nav ul.main-nav>li {
+  @apply flex
+} */
+nav ul.nav-main>li:not(:where(:last-child, #toggle-mobile-nav))::after {
+  content: "|";
+  @apply px-3;
+}
+
+nav ul.nav-main>li.active a,
+nav ul.nav-main>li a:hover {
+  border-bottom: 5px solid white;
+}
+
+nav .mobile-menu li {
+  @apply w-full text-center;
+  border-bottom: 1px solid white;
+}
+nav .mobile-menu a {
+  @apply block py-4;
+}
+nav .mobile-menu li:last-child {
+  border-bottom: 0;
+}
+
+.nav-spacing {
+  @apply h-[82px] xl:h-[102px]
+}
+
+main {
+  @apply lg:max-w-screen-lg mx-auto grid md:grid-cols-2 gap-9 xl:gap-x-20 px-4 pt-5 pb-14;
+}
+
+.breadcrumb {
+  @apply lg:max-w-screen-lg mx-auto flex gap-2 text-xs p-6 pl-4 pb-0;
+}
+article.gray-box {
+  @apply relative mt-10 mb-4 bg-wedl-gray px-4 pt-14 pb-8;
+}
+
+article.gray-box .circle {
+  @apply  absolute -top-10 h-20 w-20 rounded-full bg-wedl-red text-white -rotate-[22deg] font-semibold flex justify-center items-center text-center;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+article.gray-box > ul {
+  @apply text-sm list-disc ml-10 pt-2 pb-4;
+}
+
+article.gray-box > div {
+  @apply flex justify-between text-sm py-1;
+}
+article.gray-box > div:not(:last-child) {
+  border-bottom: 1px solid #DBDBDB;
+}
+article.gray-box > div > div:first-child {
+  @apply pl-4;
+}
+
+
+footer {
+  @apply py-10;
+}
+
+footer article, footer article p {
+  @apply pb-10 text-sm;
+}
