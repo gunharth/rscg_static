@@ -67,7 +67,7 @@ mix
       //'resources/views/**/*.php',
     ],
     proxy: {
-      target: 'http://sport-wedl.test',
+      target: 'http://rscg-static.test',
       //ws: true,
     },
   })

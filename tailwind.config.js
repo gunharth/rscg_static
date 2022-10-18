@@ -154,6 +154,11 @@ module.exports = {
       cta: '#00E7BD',
       // 'test': '#0073a9',
       test: '#405c69',
+      rscg: {
+        bg: '#222124',
+        dark: '#100f11',
+        gray: '#929292'
+      },
       wedl: {
         red: '#D22B27',
         white: '#F3F3F3',

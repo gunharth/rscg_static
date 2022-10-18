@@ -15,7 +15,7 @@
   \*****************************/
 /***/ (() => {
 
-eval("// Grab HTML Elements\nvar btn = document.querySelector('#toggle-mobile-nav');\nvar menu = document.querySelector('.mobile-menu');\n/* const hamburger = document.querySelector('#hamburger')\nconst logo = document.querySelector('#logo_face') */\n\nvar classToggle = function classToggle(el) {\n  for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {\n    args[_key - 1] = arguments[_key];\n  }\n\n  return args.map(function (e) {\n    return el.classList.toggle(e);\n  });\n}; // Add Event Listeners\n\n\nbtn.addEventListener('click', function (e) {\n  e.preventDefault(); //classToggle(menu, 'scale-y-0')\n  //classToggle(menu, 'w-0', 'w-full', 'md:w-1/2')\n  //classToggle(menu, 'left-0', '-left-full')\n  //classToggle(menu, '-translate-y-full', 'opacity-0')\n  //menu.classList.toggle('-translate-y-full')\n\n  menu.classList.toggle('h-0'); //menu.classList.toggle('-translate-x-full')\n  //hamburger.classList.toggle('active')\n  //logo.classList.toggle('active')\n});\nvar swiper = new Swiper('.swiper', {\n  // Optional parameters\n  //direction: 'vertical',\n  loop: false,\n  //speed: 2000,\n\n  /*   autoplay: {\n    delay: 5000,\n    disableOnInteraction: false,\n  }, */\n  // If we need pagination\n  pagination: {\n    el: '.swiper-pagination',\n    clickable: true,\n    renderBullet: function renderBullet(index, className) {\n      return '<span class=\"' + className + '\"></span>';\n    }\n  } // Navigation arrows\n\n  /*   navigation: {\n    nextEl: '.swiper-button-next',\n    prevEl: '.swiper-button-prev',\n  }, */\n  // And if we need scrollbar\n\n  /*   scrollbar: {\n    el: '.swiper-scrollbar',\n  }, */\n\n});\n/*\nconst nav = document.querySelector('nav')\n\nwindow.onscroll = function () {\n  if (document.body.scrollTop >= 300 || document.documentElement.scrollTop >= 300) {\n    nav.classList.add('bg-joy-gray')\n    nav.classList.remove('bg-transparent')\n    hamburger.classList.add('scrolled')\n  } else {\n    console.log('scrolled')\n    nav.classList.add('bg-transparent')\n    nav.classList.remove('bg-joy-gray')\n    hamburger.classList.remove('scrolled')\n  }\n}\n\nimport Animasection from './animation.js'\nAnimasection.observeAll() *///# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvYXBwLmpzLmpzIiwibmFtZXMiOlsiYnRuIiwiZG9jdW1lbnQiLCJxdWVyeVNlbGVjdG9yIiwibWVudSIsImNsYXNzVG9nZ2xlIiwiZWwiLCJhcmdzIiwibWFwIiwiZSIsImNsYXNzTGlzdCIsInRvZ2dsZSIsImFkZEV2ZW50TGlzdGVuZXIiLCJwcmV2ZW50RGVmYXVsdCIsInN3aXBlciIsIlN3aXBlciIsImxvb3AiLCJwYWdpbmF0aW9uIiwiY2xpY2thYmxlIiwicmVuZGVyQnVsbGV0IiwiaW5kZXgiLCJjbGFzc05hbWUiXSwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3Jlc291cmNlcy9qcy9hcHAuanM/Y2VkNiJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBHcmFiIEhUTUwgRWxlbWVudHNcbmNvbnN0IGJ0biA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJyN0b2dnbGUtbW9iaWxlLW5hdicpXG5jb25zdCBtZW51ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignLm1vYmlsZS1tZW51Jylcbi8qIGNvbnN0IGhhbWJ1cmdlciA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJyNoYW1idXJnZXInKVxuY29uc3QgbG9nbyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJyNsb2dvX2ZhY2UnKSAqL1xuXG5jb25zdCBjbGFzc1RvZ2dsZSA9IChlbCwgLi4uYXJncykgPT4gYXJncy5tYXAoKGUpID0+IGVsLmNsYXNzTGlzdC50b2dnbGUoZSkpXG5cbi8vIEFkZCBFdmVudCBMaXN0ZW5lcnNcbmJ0bi5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsIChlKSA9PiB7XG4gIGUucHJldmVudERlZmF1bHQoKVxuICAvL2NsYXNzVG9nZ2xlKG1lbnUsICdzY2FsZS15LTAnKVxuICAvL2NsYXNzVG9nZ2xlKG1lbnUsICd3LTAnLCAndy1mdWxsJywgJ21kOnctMS8yJylcbiAgLy9jbGFzc1RvZ2dsZShtZW51LCAnbGVmdC0wJywgJy1sZWZ0LWZ1bGwnKVxuICAvL2NsYXNzVG9nZ2xlKG1lbnUsICctdHJhbnNsYXRlLXktZnVsbCcsICdvcGFjaXR5LTAnKVxuICAvL21lbnUuY2xhc3NMaXN0LnRvZ2dsZSgnLXRyYW5zbGF0ZS15LWZ1bGwnKVxuICBtZW51LmNsYXNzTGlzdC50b2dnbGUoJ2gtMCcpXG4gIC8vbWVudS5jbGFzc0xpc3QudG9nZ2xlKCctdHJhbnNsYXRlLXgtZnVsbCcpXG4gIC8vaGFtYnVyZ2VyLmNsYXNzTGlzdC50b2dnbGUoJ2FjdGl2ZScpXG4gIC8vbG9nby5jbGFzc0xpc3QudG9nZ2xlKCdhY3RpdmUnKVxufSlcblxuY29uc3Qgc3dpcGVyID0gbmV3IFN3aXBlcignLnN3aXBlcicsIHtcbiAgLy8gT3B0aW9uYWwgcGFyYW1ldGVyc1xuICAvL2RpcmVjdGlvbjogJ3ZlcnRpY2FsJyxcbiAgbG9vcDogZmFsc2UsXG4gIC8vc3BlZWQ6IDIwMDAsXG4gIC8qICAgYXV0b3BsYXk6IHtcbiAgICBkZWxheTogNTAwMCxcbiAgICBkaXNhYmxlT25JbnRlcmFjdGlvbjogZmFsc2UsXG4gIH0sICovXG5cbiAgLy8gSWYgd2UgbmVlZCBwYWdpbmF0aW9uXG4gIHBhZ2luYXRpb246IHtcbiAgICBlbDogJy5zd2lwZXItcGFnaW5hdGlvbicsXG4gICAgY2xpY2thYmxlOiB0cnVlLFxuICAgIHJlbmRlckJ1bGxldDogZnVuY3Rpb24gKGluZGV4LCBjbGFzc05hbWUpIHtcbiAgICAgIHJldHVybiAnPHNwYW4gY2xhc3M9XCInICsgY2xhc3NOYW1lICsgJ1wiPjwvc3Bhbj4nXG4gICAgfSxcbiAgfSxcblxuICAvLyBOYXZpZ2F0aW9uIGFycm93c1xuICAvKiAgIG5hdmlnYXRpb246IHtcbiAgICBuZXh0RWw6ICcuc3dpcGVyLWJ1dHRvbi1uZXh0JyxcbiAgICBwcmV2RWw6ICcuc3dpcGVyLWJ1dHRvbi1wcmV2JyxcbiAgfSwgKi9cblxuICAvLyBBbmQgaWYgd2UgbmVlZCBzY3JvbGxiYXJcbiAgLyogICBzY3JvbGxiYXI6IHtcbiAgICBlbDogJy5zd2lwZXItc2Nyb2xsYmFyJyxcbiAgfSwgKi9cbn0pXG4vKlxuY29uc3QgbmF2ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignbmF2Jylcblxud2luZG93Lm9uc2Nyb2xsID0gZnVuY3Rpb24gKCkge1xuICBpZiAoZG9jdW1lbnQuYm9keS5zY3JvbGxUb3AgPj0gMzAwIHx8IGRvY3VtZW50LmRvY3VtZW50RWxlbWVudC5zY3JvbGxUb3AgPj0gMzAwKSB7XG4gICAgbmF2LmNsYXNzTGlzdC5hZGQoJ2JnLWpveS1ncmF5JylcbiAgICBuYXYuY2xhc3NMaXN0LnJlbW92ZSgnYmctdHJhbnNwYXJlbnQnKVxuICAgIGhhbWJ1cmdlci5jbGFzc0xpc3QuYWRkKCdzY3JvbGxlZCcpXG4gIH0gZWxzZSB7XG4gICAgY29uc29sZS5sb2coJ3Njcm9sbGVkJylcbiAgICBuYXYuY2xhc3NMaXN0LmFkZCgnYmctdHJhbnNwYXJlbnQnKVxuICAgIG5hdi5jbGFzc0xpc3QucmVtb3ZlKCdiZy1qb3ktZ3JheScpXG4gICAgaGFtYnVyZ2VyLmNsYXNzTGlzdC5yZW1vdmUoJ3Njcm9sbGVkJylcbiAgfVxufVxuXG5pbXBvcnQgQW5pbWFzZWN0aW9uIGZyb20gJy4vYW5pbWF0aW9uLmpzJ1xuQW5pbWFzZWN0aW9uLm9ic2VydmVBbGwoKSAqL1xuIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBLElBQU1BLEdBQUcsR0FBR0MsUUFBUSxDQUFDQyxhQUFULENBQXVCLG9CQUF2QixDQUFaO0FBQ0EsSUFBTUMsSUFBSSxHQUFHRixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsY0FBdkIsQ0FBYjtBQUNBO0FBQ0E7O0FBRUEsSUFBTUUsV0FBVyxHQUFHLFNBQWRBLFdBQWMsQ0FBQ0MsRUFBRDtFQUFBLGtDQUFRQyxJQUFSO0lBQVFBLElBQVI7RUFBQTs7RUFBQSxPQUFpQkEsSUFBSSxDQUFDQyxHQUFMLENBQVMsVUFBQ0MsQ0FBRDtJQUFBLE9BQU9ILEVBQUUsQ0FBQ0ksU0FBSCxDQUFhQyxNQUFiLENBQW9CRixDQUFwQixDQUFQO0VBQUEsQ0FBVCxDQUFqQjtBQUFBLENBQXBCLEMsQ0FFQTs7O0FBQ0FSLEdBQUcsQ0FBQ1csZ0JBQUosQ0FBcUIsT0FBckIsRUFBOEIsVUFBQ0gsQ0FBRCxFQUFPO0VBQ25DQSxDQUFDLENBQUNJLGNBQUYsR0FEbUMsQ0FFbkM7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7RUFDQVQsSUFBSSxDQUFDTSxTQUFMLENBQWVDLE1BQWYsQ0FBc0IsS0FBdEIsRUFQbUMsQ0FRbkM7RUFDQTtFQUNBO0FBQ0QsQ0FYRDtBQWFBLElBQU1HLE1BQU0sR0FBRyxJQUFJQyxNQUFKLENBQVcsU0FBWCxFQUFzQjtFQUNuQztFQUNBO0VBQ0FDLElBQUksRUFBRSxLQUg2QjtFQUluQzs7RUFDQTtBQUNGO0FBQ0E7QUFDQTtFQUVFO0VBQ0FDLFVBQVUsRUFBRTtJQUNWWCxFQUFFLEVBQUUsb0JBRE07SUFFVlksU0FBUyxFQUFFLElBRkQ7SUFHVkMsWUFBWSxFQUFFLHNCQUFVQyxLQUFWLEVBQWlCQyxTQUFqQixFQUE0QjtNQUN4QyxPQUFPLGtCQUFrQkEsU0FBbEIsR0FBOEIsV0FBckM7SUFDRDtFQUxTLENBWHVCLENBbUJuQzs7RUFDQTtBQUNGO0FBQ0E7QUFDQTtFQUVFOztFQUNBO0FBQ0Y7QUFDQTs7QUE1QnFDLENBQXRCLENBQWY7QUE4QkE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIn0=\n//# sourceURL=webpack-internal:///./resources/js/app.js\n");
+eval("//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsid2VicGFjazovLy8uL3Jlc291cmNlcy9qcy9hcHAuanM/Y2VkNiJdLCJzb3VyY2VzQ29udGVudCI6WyIiXSwibWFwcGluZ3MiOiIiLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvYXBwLmpzLmpzIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/app.js\n");
 
 /***/ }),
 
@@ -23,21 +23,153 @@ eval("// Grab HTML Elements\nvar btn = document.querySelector('#toggle-mobile-na
 /*!*******************************!*\
   !*** ./resources/css/app.css ***!
   \*******************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/css-loader/dist/cjs.js):\nError: Can't resolve '../fonts/fira-sans-v16-latin-regular.woff2' in '/Users/guni/Code/projects/rscg_static/resources/css'\n    at finishWithoutResolve (/Users/guni/Code/projects/rscg_static/node_modules/enhanced-resolve/lib/Resolver.js:309:18)\n    at /Users/guni/Code/projects/rscg_static/node_modules/enhanced-resolve/lib/Resolver.js:386:15\n    at /Users/guni/Code/projects/rscg_static/node_modules/enhanced-resolve/lib/Resolver.js:435:5\n    at eval (eval at create (/Users/guni/Code/projects/rscg_static/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /Users/guni/Code/projects/rscg_static/node_modules/enhanced-resolve/lib/Resolver.js:435:5\n    at eval (eval at create (/Users/guni/Code/projects/rscg_static/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at /Users/guni/Code/projects/rscg_static/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:87:43\n    at /Users/guni/Code/projects/rscg_static/node_modules/enhanced-resolve/lib/Resolver.js:435:5\n    at eval (eval at create (/Users/guni/Code/projects/rscg_static/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /Users/guni/Code/projects/rscg_static/node_modules/enhanced-resolve/lib/Resolver.js:435:5\n    at processResult (/Users/guni/Code/projects/rscg_static/node_modules/webpack/lib/NormalModule.js:758:19)\n    at /Users/guni/Code/projects/rscg_static/node_modules/webpack/lib/NormalModule.js:860:5\n    at /Users/guni/Code/projects/rscg_static/node_modules/loader-runner/lib/LoaderRunner.js:400:11\n    at /Users/guni/Code/projects/rscg_static/node_modules/loader-runner/lib/LoaderRunner.js:252:18\n    at context.callback (/Users/guni/Code/projects/rscg_static/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\n    at Object.loader (/Users/guni/Code/projects/rscg_static/node_modules/css-loader/dist/index.js:155:5)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvY3NzL2FwcC5jc3MuanMiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcmVzb3VyY2VzL2Nzcy9hcHAuY3NzP2E1ZTciXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/css/app.css\n");
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"/public/js/app": 0,
+/******/ 			"public/css/app": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
-/******/ 	__webpack_modules__["./resources/js/app.js"]();
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./resources/css/app.css"]();
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["public/css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["public/css/app"], () => (__webpack_require__("./resources/css/app.css")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
